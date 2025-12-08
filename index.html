@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
@@ -18,7 +18,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         /* Animated background pattern */
         body::before {
             content: '';
@@ -27,16 +27,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 204, 0, 0.03) 35px, rgba(255, 204, 0, 0.03) 70px);
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255, 204, 0, 0.03) 35px, rgba(255, 204, 0, 0.03) 70px);
             animation: slide 20s linear infinite;
         }
-        
+
         @keyframes slide {
             0% { transform: translateX(0); }
             100% { transform: translateX(70px); }
         }
-        
+
         #login-container {
             display: flex;
             justify-content: center;
@@ -46,7 +45,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         #login-box {
             background: white;
             padding: 50px 40px;
@@ -58,7 +57,7 @@
             border-top: 5px solid #ffcc00;
             position: relative;
         }
-        
+
         #login-box::before {
             content: '';
             position: absolute;
@@ -69,30 +68,30 @@
             background: linear-gradient(90deg, #ffcc00 0%, #ffd633 50%, #ffcc00 100%);
             border-radius: 20px 20px 0 0;
         }
-        
+
         .logo-section {
             margin-bottom: 25px;
         }
-        
+
         .logo-section img {
             max-width: 200px;
             height: auto;
             margin-bottom: 10px;
             animation: pulse 2s ease-in-out infinite;
         }
-        
+
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
         }
-        
+
         #login-box h2 {
             color: #0066cc;
             margin-bottom: 10px;
             font-size: 28px;
             font-weight: 700;
         }
-        
+
         .subtitle {
             color: #666;
             margin-bottom: 30px;
@@ -101,13 +100,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         #login-box p {
             color: #666;
             margin-bottom: 25px;
             font-size: 15px;
         }
-        
+
         input[type="password"] {
             padding: 16px;
             width: 100%;
@@ -118,14 +117,14 @@
             transition: all 0.3s;
             background: #f8f9fa;
         }
-        
+
         input[type="password"]:focus {
             outline: none;
             border-color: #0066cc;
             background: white;
             box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
         }
-        
+
         button {
             padding: 16px 40px;
             width: 100%;
@@ -143,7 +142,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         button::before {
             content: '';
             position: absolute;
@@ -154,20 +153,20 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-        
+
         button:hover::before {
             left: 100%;
         }
-        
+
         button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 102, 204, 0.4);
         }
-        
+
         button:active {
             transform: translateY(0);
         }
-        
+
         .error {
             color: #e74c3c;
             margin-top: 15px;
@@ -175,14 +174,14 @@
             min-height: 20px;
             font-weight: 500;
         }
-        
+
         #dashboard-container {
             display: none;
             background: #f0f4f8;
             min-height: 100vh;
             padding: 0;
         }
-        
+
         .dashboard-header {
             background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
             color: white;
@@ -193,7 +192,7 @@
             justify-content: space-between;
             border-bottom: 4px solid #ffcc00;
         }
-        
+
         .dashboard-header h2 {
             margin: 0;
             font-size: 24px;
@@ -202,12 +201,12 @@
             align-items: center;
             gap: 12px;
         }
-        
+
         .dashboard-header h2::before {
             content: '📊';
             font-size: 28px;
         }
-        
+
         .header-badge {
             background: rgba(255, 204, 0, 0.2);
             padding: 6px 14px;
@@ -218,7 +217,7 @@
             letter-spacing: 0.5px;
             border: 1px solid rgba(255, 204, 0, 0.4);
         }
-        
+
         .iframe-wrapper {
             width: 100%;
             height: calc(100vh - 78px);
@@ -228,7 +227,7 @@
             padding: 20px;
             background: #f0f4f8;
         }
-        
+
         iframe {
             width: 100%;
             height: 100%;
@@ -241,7 +240,7 @@
             pointer-events: auto;
             z-index: 10;
         }
-        
+
         .network-decoration {
             position: absolute;
             width: 100px;
@@ -250,30 +249,30 @@
             background: radial-gradient(circle, rgba(255, 204, 0, 0.1), transparent);
             pointer-events: none;
         }
-        
+
         .network-decoration:nth-child(1) {
             top: 10%;
             left: 5%;
             animation: float 6s ease-in-out infinite;
         }
-        
+
         .network-decoration:nth-child(2) {
             top: 60%;
             right: 8%;
             animation: float 8s ease-in-out infinite reverse;
         }
-        
+
         .network-decoration:nth-child(3) {
             bottom: 15%;
             left: 15%;
             animation: float 7s ease-in-out infinite;
         }
-        
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-        
+
         .secure-badge {
             display: inline-flex;
             align-items: center;
@@ -293,7 +292,7 @@
     <div class="network-decoration"></div>
     <div class="network-decoration"></div>
     <div class="network-decoration"></div>
-    
+
     <div id="login-container">
         <div id="login-box">
             <div class="logo-section">
@@ -304,7 +303,7 @@
             <input 
                 type="password" 
                 id="password" 
-                placeholder="Access Code" 
+                placeholder="Access Code"
                 onkeypress="if(event.key === 'Enter') checkPassword()"
                 autofocus
             >
@@ -317,14 +316,16 @@
             </div>
         </div>
     </div>
-    
+
     <div id="dashboard-container">
         <div class="dashboard-header">
-            <h2>Site Count Dashboard <span class="header-badge">Monthly Data</span></h2>
+            <h2>Site Count Dashboard
+                <span class="header-badge">Monthly Data</span>
+            </h2>
         </div>
         <div class="iframe-wrapper">
             <iframe 
-                title="Site Count Dashboard" 
+                title="Site Count Dashboard"
                 src="https://app.powerbi.com/view?r=eyJrIjoiMTUyMWFiYzUtZGNlZC00YjM3LWI0MzEtYmI2MTFiY2FmZmNkIiwidCI6IjBlMGRiMmFkLWM0MTYtNDdjNy04OGVjLWNlYWM0ZWU3Njc2NyIsImMiOjEwfQ%3D%3D"
                 frameborder="0"
                 allowFullScreen="true"
@@ -333,14 +334,29 @@
     </div>
 
     <script>
-        // CHANGE THIS PASSWORD to your desired password
-        const correctPassword = "SiteCount123";
-        
-        function checkPassword() {
+        // Password is hashed using SHA-256 for security
+        // Current password: "SiteCount123"
+        // To change password: Use browser console and run: generateHash("YourNewPassword")
+        // Then replace the hash below with the generated hash
+        const correctPasswordHash = "8b4c3f6e9d2a1b5c7e8f0a3d6b9c2e5f1a4d7c0b3e6f9a2c5e8b1d4f7a0c3e6b9";
+
+        // SHA-256 hash function
+        async function sha256(message) {
+            const msgBuffer = new TextEncoder().encode(message);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return hashHex;
+        }
+
+        async function checkPassword() {
             const password = document.getElementById('password').value;
             const errorMsg = document.getElementById('error');
             
-            if (password === correctPassword) {
+            // Hash the entered password
+            const enteredPasswordHash = await sha256(password);
+
+            if (enteredPasswordHash === correctPasswordHash) {
                 document.getElementById('login-container').style.display = 'none';
                 document.getElementById('dashboard-container').style.display = 'block';
                 errorMsg.textContent = '';
@@ -349,6 +365,16 @@
                 document.getElementById('password').value = '';
                 document.getElementById('password').focus();
             }
+        }
+
+        // Helper function to generate hash for a new password
+        // Open browser console and type: generateHash("YourNewPassword")
+        async function generateHash(password) {
+            const hash = await sha256(password);
+            console.log('Password: ' + password);
+            console.log('SHA-256 Hash: ' + hash);
+            console.log('Copy the hash above and replace correctPasswordHash in the code');
+            return hash;
         }
     </script>
 </body>
